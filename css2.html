@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자 다루기</title>
+    <style>
+        [class="red"] {
+            color: red;
+        }
+        [href="#"] {
+            color:bisque;
+        }
+        div > p {
+            color: blue;
+        }
+        .box h2 {
+            color: violet;
+        }
+        h1 + h2 {
+            color: gray;
+        }
+        h2 ~ h3{
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">href</a>
+    <h1 class="red">h1</h1>
+    <p>p</p>
+    <dl>
+        <dt class="red blue">CSS</dt>
+        <dd>CSS는 꾸미기</dd>
+    </dl>
+    <div>
+        <p>div p</p>
+        <div>
+            <em><p>div p</p></em>
+        </div>
+    </div>
+    <div class="box">
+        <h2>h2-1</h2>
+        <div>
+            <h2>h2-2</h2>
+        </div>
+    </div>
+
+    <h1>h1-1</h1>
+    <h2>h2</h2>
+    <h2>h2-2</h2>
+    <h3>h3</h3>
+    <h3>h3-1</h3>
+    </body>
+</html>

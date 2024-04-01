@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변형 효과 적용하기</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transform: translate(100px, 50px);
+            margin: 100px auto;
+        }
+
+        .box:hover {
+            transform: scale(2);
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 50px;
+        }
+
+        .box2:hover {
+            transform: rotate(30deg);
+            transform-origin: right top;
+        }
+
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+
+</html>

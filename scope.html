@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--scope : 연관있는 데이터 표현 할 때 사용-->
+    <table border="1">
+        <caption>성적표</caption>
+        <tr>
+            <th rowspan="2" scope="col">구분</th>
+            <th colspan="2" scope="colgroup">1학년</th>
+        </tr>
+        <tr>
+            <th>중간고사</th>
+            <th>기말고사</th>
+        </tr>
+        <tr>
+            <th rowspan="2" scope="rowgroup">전공</th>
+            <td>A+</td>
+            <td>B+</td>
+        </tr>
+        <tr>
+            <td>C-</td>
+            <td>B</td>
+        </tr>
+    </table>
+</body>
+</html>
