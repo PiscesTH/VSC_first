@@ -8,15 +8,32 @@
         h1 {
             font-family: dotum, 'Times New Roman', serif;
             /* 글꼴. 여러 개 지정 가능. 앞쪽 글꼴 적용 불가능하면 다음 글꼴 적용 */
+            /* 보통은 웹 폰트 사용. 글꼴 이름에 공백이 있으면 따옴표 필요함. 한글도 따옴표 사용 권장 */
+            font-size: 16px; /* rem, em, px 주로 사용*/
+            font-weight: 700; /* 글꼴에서 해당 굵기 지원 해야함 */
+            font-variant: small-caps; /* 영문 텍스트 전용. 영문 텍스트를 크기가 작은 대문자로 변경할 때 사용하는 속성 ?*/
+            color: blue;
+            text-align: right;/*정렬*/
+        }
+        h2 {
+            font-size: 16px;
+            text-align: justify; /*양쪽 끝에 맞춰서 정렬. 텍스트 사이 공백 생김*/
+            text-decoration: overline;
+            letter-spacing: 16px;/*텍스트 사이 간격*/
+            line-height: 2;/*행간 간격*/
+        }
+        a {
+            text-decoration: none; /*텍스트 꾸미기 적용 x*/
         }
     </style>
 </head>
 <body>
     <h1>h1</h1>
-    <h2>h2</h2>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque esse aut veniam.</h2>
     <h3>h3</h3>
     <h4>h4</h4>
     <h5>h5</h5>
     <h6>h6</h6>
+    <a href="#">link</a>
 </body>
 </html>
