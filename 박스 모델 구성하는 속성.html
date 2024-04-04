@@ -4,11 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>박스 모델을 구성하는 속성 다루기</title>
+    <style>
+        .block-1 {
+            margin: 20px;
+            border: 1px solid blue;
+            padding: 10px;
+            width: 100px;
+            height: 100px;
+            box-sizing: border-box; /*border 영역으로 width & height 크기 설정*/
+            display: inline; /*태그(박스) 속성 변경할 때 사용*/
+        }
+        .inline-1 {
+            margin: 100px;
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <p class="block-1">block-1</p>
     <p class="block-2">block-2</p>
     <span class="inline-1">inline-1</span>
     <span class="inline-2">inline-2</span>
+    <!--
+        margin : 외부 여백. 겹치는 마진 영역이 생기면 큰 쪽만 적용
+                인라인 성격의 박스에는 마진이 위 아래에 영향 x
+        border : 테두리. 테두리 굵기/종류/색상 순으로 작성
+                속성을 분리해서 사용할 수 있지만 분리 안하는 편.
+                이렇게 한번에 여러 속성을 작성할 수 있는 속성을 '축약(단축)속성' 이라 한다. margin은 크기만 지정하므로 축약 속성x
+        padding : 테두리 내부 여백
+        content : 내용
+    -->
 </body>
 </html>
