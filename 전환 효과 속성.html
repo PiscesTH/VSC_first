@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>전환 효과 속성 적용하기</title>
+    <!--전환 : 한 요소에 적용된 스타일 속성 값을 다른 속성값으로 바꾸는 것-->
     <style>
         .box {
             width: 100px;
             height: 100px;
             background-color: blue;
+            transition-property: background-color, width;  /*all, none, 속성값 : 전환 대상 선택*/
+            transition-duration: 2s, 5s;    /*정해진 시간에 걸쳐 전환. property와 duration은 전환 속성 사용할 때 필요한 최소 조건 ?*/
+            transition-timing-function: linear; /*전환 내부 속도 ? linear, ease, ease-in, ease-out, ease-in-out*/
+            transition-delay: 3s; /*정해진 시간 후에 전환 시작*/
+            /* transition: background-color 2s linear 3s, width 5s linear 3s;  한 줄(단축 속성)로 작성 가능*/
+        }
+        .box:hover {
+            width: 300px;
+            background-color: red;
         }
     </style>
 </head>
