@@ -4,8 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>애니메이션 속성으로 전환 효과 제어하기</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation-name: bgChange;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-fill-mode: both;  /*시작 or 끝 상태 설정 ?
+            none - 시작과 끝이 기본 속성으로 설정
+            forwards - 애니메이션 끝날때의 속성 유지. 주로 사용
+            backwards - 애니메이션 시작지점 속성 유지. 끝나면 초기 속성으로 복구
+            both - 애니메이션 시작지점 속성 유지. 끝날때의 속성도 유지 */
+            animation-iteration-count: infinite; /*무한반복. 특정 숫자 넣으면 그만큼 반복*/
+            animation-play-state: running; /*기본값. paused*/
+            animation-direction: reverse; /*애니메이션 진행 방향. alternate - 홀수번째 정방향 짝수번째 역방향*/
+            /* animation-timing-function: ;도 사용가능 */
+            /* animation: bgChange 2s 2s forwards forwards 5 running alternate ease; 한번에 적용 가능*/
+        }
+        .box:hover {
+            animation-play-state: paused;
+        }
+        @keyframes bgChange {
+            0% /*시작지점. from 로 대체가능*/ {
+                background-color: orange;
+            }
+            50% /*%로 하면 중간 지점 설정 가능*/{
+                background-color: pink;
+            }
+            100% /*끝지점. to 로 대체가능*/ {
+                background-color: red;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="box"></div>
 </body>
 </html>
