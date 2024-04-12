@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위치 속성으로 html 요소 배치하기</title>
+    <style>
+        body {
+            height: 5000px;
+            overflow: auto;
+        }
+        .container {
+            margin: 150px;
+            padding: 1rem;
+            width: 100%;
+            background-color: #ccc;
+            position: relative;
+        }
+        .box {
+            height: 100px;
+            width: 100px;
+        }
+
+        .red {
+            background-color: red;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            /*position - 좌표로 위치 지정. position 설정된 요소들은 설정 안된 요소들이 인식 못함. 그래서
+            static : 기본 설정. 기본 흐름에 따라 배치
+            absolute : 절대적인 좌표값으로 배치. 기존의 자리 유지 x - 부모 요소의 posotion이 static이 아니면 부모가 기준점이 된다.
+            relative : 기존 자리 유지하면서 배치 ?
+            fixed : 배치 후 자리 고정. 배너 등에 많이 사용
+            sticky : 5에 추가. 설정된 포지션 값 벗어나면 fixed 처럼 적용.
+            */
+        }
+
+        .blue {
+            background-color: blue;
+            position: absolute;
+        }
+
+        .green {
+            background-color: green;
+            position: fixed;
+            top: 100px;
+            left: 50px;
+        }
+
+        .purple {
+            background-color: purple;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <div class="box red"></div>
+    <div class="box green"></div>
+    <div class="box blue"></div>
+    <div class="box purple"></div>
+    <div class="box orange"></div>
+    </div>
+</body>
+
+</html>
