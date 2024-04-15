@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--viewport 메타 태그 있으면 기본 크기와 다른 화면에도 호환 가능. 접속하는 디바이스 크기에 맞춰줌-->
+    <title>반응형 웹을 위한 미디어 쿼리 사용하기</title>
+    <style>
+        @media only screen and (min-width:340px) and (orientation: portrait) { 
+            /* all - 모든 기기. print - 프린트 미리보기, 프린트 기기. screen - 화면이 있는 기기. speech - 음성리더기 */
+            /*최소넓이가 1140px 이상일 경우 css적용*/
+            /* orientation : 화면 방향. portrait - 세로. landscape - 가로. */
+            p {
+                color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--뷰 포트 : 웹페이지가 보여지는 화면 영역. 기본 980px -->
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Placeat assumenda blanditiis laborum facilis quidem nemo voluptatibus culpa mollitia molestiae aperiam soluta, 
+        deserunt corporis voluptatem obcaecati quaerat sunt nisi? Voluptatibus, inventore?
+    </p>
+</body>
+</html>
