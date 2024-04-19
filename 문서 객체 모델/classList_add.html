@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>classList</title>
+  <style>
+    .styleSet1{
+      color:red;
+      font-size:20px;
+    }
+  </style>
+</head>
+<body>
+  <p id="text">text</p>
+  <script>
+    const pE1 = document.querySelector('#text');
+    console.log(pE1);
+    // pE1.classList.add('styleSet1');  class='styleSet1' 추가
+    // pE1.classList.remove('styleSet1'); 제거 -> 결과 : class=''
+    setInterval(() => {
+      pE1.classList.toggle('styleSet1');  //토글방식으로 추가&제거. 이 코드는 1초마다 토글반복실행
+    }, 1000);
+  </script>
+</body>
+</html>
