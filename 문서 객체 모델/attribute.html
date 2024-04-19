@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>attribute</title>
+</head>
+<body>
+  <a href="https://www.gilbut.co.kr/">길벗</a>
+  <script>
+    const aEl = document.querySelector('a');
+    const href = aEl.getAttribute('href');  //속성값 가져오기
+    console.log(href);
+    aEl.setAttribute('href', 'https://www.naver.com');  //속성값 변경하기
+    aEl.setAttribute('target', '_blank');
+    aEl.removeAttribute('href');  //속성값 제거하기
+  </script>
+</body>
+</html>
