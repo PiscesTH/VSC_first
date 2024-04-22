@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드 추가/삭제하기</title>
+</head>
+<body>
+    <h1>text</h1>
+    <script>
+        const aEl = document.createElement('a');
+        const textNode = document.createTextNode('링크');
+        const hrefAtt = document.createAttribute('href');
+        hrefAtt.value = 'https://www.naver.com';
+
+        aEl.setAttributeNode(hrefAtt);
+        aEl.appendChild(textNode);
+        document.body.appendChild(aEl);
+
+        const hEl = document.querySelector('h');
+        hEl.parentNode.removeChild(hEl);
+    </script>
+</body>
+</html>

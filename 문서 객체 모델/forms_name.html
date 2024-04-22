@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>forms name</title>
+</head>
+<body>
+  <form name="frm1">
+    <input type="text">
+  </form>
+  <form name="frm2">
+    <input type="text">
+  </form>
+  <form name="frm3">
+    <input type="text">
+  </form>
+  <script>
+    const formEl = document.querySelectorAll('form');
+    const formEl2 = document.forms; //form 요소에서 사용가능한 방법. form요소를 모두 찾아준다.
+    const formEl3 = document.frm3;  //name속성으로 바로 선택
+    console.log(formEl3);
+  </script>
+</body>
+</html>
